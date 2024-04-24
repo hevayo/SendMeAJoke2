@@ -1,0 +1,17 @@
+
+<api xmlns="http://ws.apache.org/ns/synapse" name="JokeAPI" context="/joke">
+    <resource methods="GET" uri-template="/send">
+        <inSequence>
+			<call initAxis2ClientOptions="false">
+				<endpoint key="MyJokeEndpoint" />
+				<target type="body" />
+			</call>
+			<class name="sample">
+			</class>
+			
+			
+            
+            <respond/>
+		</inSequence>
+    </resource>
+</api>

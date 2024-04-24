@@ -1,0 +1,13 @@
+
+<task xmlns="http://ws.apache.org/ns/synapse"
+      name="DailyJokeTask"
+      class="org.apache.synapse.startup.tasks.MessageInjector"
+      group="synapse.simple.quartz">
+    <trigger interval="86400"/>
+    <property name="message">
+        <joke xmlns=""/>
+    </property>
+    <property name="injectTo" value="sequence"/>
+    <property name="sequenceName" value="GetJokeSequence"/>
+    <property name="format" value="soap11"/>
+</task>

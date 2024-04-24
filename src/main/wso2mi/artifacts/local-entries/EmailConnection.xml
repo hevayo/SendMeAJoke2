@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <localEntry key="EmailConnection" xmlns="http://ws.apache.org/ns/synapse">
+        <email.init>
+  <connectionType>SMTP</connectionType>
+  <name>EmailConnection</name>
+  <host>mail.google.com</host>
+  <port>8989</port>
+  <requireAuthentication>true</requireAuthentication>
+  <username>test</username>
+  <password>test</password>
+</email.init>
+    </localEntry>
